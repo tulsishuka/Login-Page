@@ -7,9 +7,7 @@ const Customer = () => {
       
      <header className="w-full max-w-6xl flex justify-between items-center py-6"> 
         <h1 className="text-3xl font-bold text-gray-800">Welcome, Customer!</h1>
-        {/* <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
-          Logout
-        </button>  */}
+      
     <button
   onClick={() => {
     localStorage.removeItem("token");

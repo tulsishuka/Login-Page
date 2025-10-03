@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import ProctectRoutes from './utils/ProctectRoutes'
 import AdminDashboard from './pages/AdminDashboard'
 import Customer from './pages/Customer'
+import UnauthorizedPage from './pages/Unauthorized'
 function App() {
   return (
     <>
@@ -23,7 +24,7 @@ function App() {
   />    
     <Route path="/login" element={<Login/>} />    
                 {/* <Route path="/unaauthorized" element={<p className='font-bold text-3xl my-20 ml-20'>Unauthorized</p>} /> */}
-                 <Route path="/unauthorized" element={<p className='font-bold text-3xl my-20 ml-20'>Unauthorized</p>} />
+                 <Route path="/unauthorized" element={<p className='font-bold text-3xl my-20 ml-20'><UnauthorizedPage/></p>} />
 
         </Routes>
       </Router>

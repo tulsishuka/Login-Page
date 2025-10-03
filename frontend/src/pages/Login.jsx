@@ -20,32 +20,7 @@ function Login() {
     e.preventDefault();
     setLoading(true);
     setError(null);
-//     try {
-//       const response = await axios.post("http://localhost:3000/api/auth/login", {
-// email, password    
-//       });
 
-//       if (response.data.success) {
-//         // Save user + token in context
-//         await login(response.data.user, response.data.token);
-
-//         // Redirect by role
-//         if (response.data.user.role === "admin") {
-//           navigate("/admin/dashboard");
-//         } else {
-//           navigate("/customer/dashboard");
-//         }
-//       } else {
-//         alert(response.data.error || "Login failed!");
-//       }
-//     } catch (error) {
-//     if (error.response) {
-//         setError(error.response.data.message)
-//     }
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
   try {
     const response = await axios.post("http://localhost:3000/api/auth/login", {
       email,
