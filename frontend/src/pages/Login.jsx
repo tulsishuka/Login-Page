@@ -14,7 +14,6 @@ function Login() {
   const [error, setError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
 
-  const API_URL = import.meta.env.VITE_API_URL || "";
 
   const { login } = useAuth();
   const navigate = useNavigate(); 
@@ -23,17 +22,11 @@ function Login() {
     setLoading(true);
     setError(null);
 
-  // try {
-  //   const response = await axios.post("http://localhost:3000/api/auth/login", {
-  //     email,
-  //     password,
-  //   });
-   try {
-      // ✅ Use environment variable URL, not localhost
-      const response = await axios.post(`${API_URL}/api/auth/login`, {
-        email,
-        password,
-      });
+  try {
+    const response = await axios.post("http://localhost:3000/api/auth/login", {
+      email,
+      password,
+    });
 
     if (response.data.success) {
       // Save user + token in context
