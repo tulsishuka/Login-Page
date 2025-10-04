@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt'
 import User from './models/User.js'
 import connectDB from './db/connection.js'
 
+
 const registerCustomer = async () => {
   try {
     await connectDB();
