@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 const login = async (req, res) => {
   try {
-    console.log("📩 Request body:", req.body);
+    console.log("Request body:", req.body);
 
     const { email, password } = req.body;
 
@@ -33,7 +33,7 @@ const login = async (req, res) => {
   { expiresIn: '2d' }
 );
 
-    console.log("🎫 Generated token:", token);
+    console.log(" Generated token:", token);
 
     return res.status(200).json({
       success: true,
@@ -48,7 +48,7 @@ const login = async (req, res) => {
     });
     
   } catch (error) {
-    console.error("❌ Login error:", error);
+    console.error("Login error:", error);
     return res
       .status(500)
       .json({ success: false, message: 'Internal server error' });

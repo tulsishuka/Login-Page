@@ -8,7 +8,6 @@ import dotenv from 'dotenv';
 
 const app = express()
 dotenv.config();
-connectDB()
 
 app.use(cors())
 app.use(express.json())
