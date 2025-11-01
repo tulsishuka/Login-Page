@@ -23,7 +23,9 @@ function Login() {
     setError(null);
 
   try {
-    const response = await axios.post("http://localhost:3000/api/auth/login", {
+    // const response = await axios.post("http://localhost:3000/api/auth/login", {
+        const response = await axios.post("https://login-page-backend-iluc.onrender.com/api/auth/login", {
+
       email,
       password,
     });
