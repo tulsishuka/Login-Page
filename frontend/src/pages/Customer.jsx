@@ -5,7 +5,7 @@ const Customer = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
       
-     <header className="w-full max-w-6xl flex justify-between items-center py-6"> 
+     <header className="w-full max-w-6xl flex justify-between items-center "> 
         <h1 className="text-3xl font-bold text-gray-800">Welcome, Customer!</h1>
       
     <button

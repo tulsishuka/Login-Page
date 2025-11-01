@@ -1,32 +1,25 @@
-
-
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 const login = async (req, res) => {
   try {
-    // 1️⃣ Check if data is coming from frontend
     console.log("📩 Request body:", req.body);
 
     const { email, password } = req.body;
 
-    // 2️⃣ After finding the user
     const user = await User.findOne({ email });
-    console.log("👤 User from DB:", user);
+    console.log(" User from DB:", user);
 
     if (!user) {
       return res
         .status(401)
         .json({ success: false, message: 'User not found' });
     }
-
-    // 3️⃣ Before password check
     console.log("🔑 Plain password:", password);
     console.log("🗝️ Hashed password in DB:", user.password);
 
     const isMatch = await bcrypt.compare(password, user.password);
     console.log("✅ Password match result:", isMatch);
-
     if (!isMatch) {
       return res
         .status(401)

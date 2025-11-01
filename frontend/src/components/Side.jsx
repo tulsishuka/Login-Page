@@ -1,19 +1,17 @@
 
-import { FaHome, FaTable, FaChartBar, FaCog, FaUsers, FaSignOutAlt } from "react-icons/fa";
+import {  FaCog, FaUsers, FaSignOutAlt } from "react-icons/fa";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // import navigation hook
+import { useNavigate } from "react-router-dom"; 
 import { useAuth } from "../context/AuthContext";
 
 const Sidebar = () => {
   const [active, setActive] = useState("Dashboard");
-  const navigate = useNavigate(); // initialize navigate
-const { logout } = useAuth(); // get logout function from context
+  const navigate = useNavigate(); 
+const { logout } = useAuth();
 
   const menuItems = [
         { name: "Profile", icon: <FaUsers />, path: "/customer/dashboard" },
 
-    { name: "Main Page", icon: <FaHome />, path: "/" },
-    { name: "Charts", icon: <FaChartBar />, path: "/admin/dashboard" },
     { name: "Settings", icon: <FaCog />, path: "/admin/dashboard" },
     { name: "Logout", icon: <FaSignOutAlt />, color: "red", },
   ];
@@ -23,16 +21,15 @@ const { logout } = useAuth(); // get logout function from context
   setActive(item.name);
 
   if (item.name === "Logout") {
-    logout(); // clear user from context + localStorage
-    navigate("/login"); // redirect to login page
+    logout(); 
+    navigate("/login"); 
   } else {
-    navigate(item.path); // normal navigation for other items
+    navigate(item.path); 
   }
 };
   return (
     <div className="w-64 min-h-screen bg-gradient-to-b from-blue-900 to-blue-700 text-white flex flex-col shadow-lg">
       
-      {/* Profile Section */}
       <div className="p-4 flex items-center space-x-4 bg-blue-800 rounded-b-lg">
         <img
           src="https://i.pinimg.com/originals/85/58/29/85582987f7125e4868fdcb28661e934f.png"
@@ -45,7 +42,6 @@ const { logout } = useAuth(); // get logout function from context
         </div>
       </div>
 
-      {/* Navigation Menu */}
       <nav className="flex-1 px-4 mt-4 space-y-2">
         {menuItems.map((item) => (
           <button
@@ -61,7 +57,7 @@ const { logout } = useAuth(); // get logout function from context
         ))}
       </nav>
 
-      {/* Footer */}
+     
       <div className="p-4 mt-auto text-center text-gray-300 text-sm">
         © 2025 Your Company
       </div>

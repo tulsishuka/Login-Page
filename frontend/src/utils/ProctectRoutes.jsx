@@ -37,7 +37,7 @@ const ProctectRoutes = ({ children, requireRole }) => {
       return;
     }
     if (!requireRole.includes(user.role)) {
-      navigate("/unauthorized");
+      navigate("/Unauthorized");
       return;
     }
   }, [user, navigate, requireRole]);

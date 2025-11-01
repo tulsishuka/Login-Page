@@ -2,7 +2,6 @@ import bcrypt from 'bcrypt'
 import User from './models/User.js'
 import connectDB from './db/connection.js'
 
-
 const registerCustomer = async () => {
   try {
     await connectDB();
@@ -18,9 +17,9 @@ const registerCustomer = async () => {
     });
 
     await newUser.save();
-    console.log("✅ Customer user created successfully");
+    console.log(" Customer user created successfully");
   } catch (error) {
-    console.log("❌ Error creating customer user:", error);
+    console.log(" Error creating customer user:", error);
   }
 };
 
