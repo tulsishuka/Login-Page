@@ -1,4 +1,3 @@
-Login Page
 
 A modern and responsive login page built with a clean UI and secure authentication system.
 This project demonstrates how frontend and backend work together to create a seamless user login experience.
@@ -10,6 +9,10 @@ This project demonstrates how frontend and backend work together to create a sea
 ⚙️ Frontend + Backend Integration — Real-time connection between UI and server.
 🧠 Clean & Modular Codebase — Easy to understand and extend.
 ```
+
+<img width="1864" height="837" alt="Screenshot 2025-11-01 220905" src="https://github.com/user-attachments/assets/f53ab758-03fd-4de0-a0bf-1e8052ba351d" />
+
+
 🧩 Tech Stack
 
 ```
